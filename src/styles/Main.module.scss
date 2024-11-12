@@ -2,16 +2,45 @@
     width: 100%;
     background-color: var(--color-background-black01);
     #intro {
-        .particle {}
+        background: url('../../public/img/img-intro-bg.svg') no-repeat center 15%;
+        .particle {
+            width: 100%;
+            position: relative;
+            img {
+                position: absolute;
+                left: 50%;
+                &:nth-child(1) {
+                    left: calc(50% - 40vw);
+                    bottom: calc(50% - 30vh);
+                }
+                &:nth-child(2) {
+                    left: calc(50% + 25vw);
+                    bottom: calc(50% - 20vh);
+                }
+                &:nth-child(3) {
+                    left: calc(50% - 45vw);
+                    bottom: calc(50% - 100vh);
+                }
+                &:nth-child(4) {
+                    left: calc(50% + 40vw);
+                    bottom: calc(50% - 50vh);
+                }
+                &:nth-child(5) {
+                    left: calc(50% + 35vw);
+                    bottom: calc(50% - 100vh);
+                }
+            }
+        }
         .intro-title {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 160px 0;
             h2 {
-                font-size: 112px;
+                font-size: 100px;
                 font-family: var(--font-title);
                 color: var(--color-white01);
-                line-height: 150px;
+                line-height: 125px;
                 &::first-letter{
                     color: var(--color-primary);
                 }
@@ -20,22 +49,86 @@
         .intro-container {
             max-width: var(--pc);
             margin: 0 auto;
+            display: flex;
             .intro-profile {
-                img {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .intro-profile-box {
                     width: 349px;
-                    height: 454px;
                     background-color: var(--color-background-gray01);
-                    border: none;
+                    height: 454px;
                     border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {}
+                    span {
+                        font-size: 200px;
+                        color: var(--color-white01);
+                    }
                 }
-                p {}
+                p {
+                    font-size: 48px;
+                    color: var(--color-white01);
+                    padding: 36px 0;
+                }
             }
             .intro-contents {
-
+                margin-left: 56px;
+                .intro-content {
+                    color: var(--color-white01);
+                    &:nth-child(2){
+                        margin-top: 40px;
+                    }
+                    span {
+                        width: 120px;
+                        height: 42px;
+                        line-height: 42px;
+                        display: block;
+                        text-align: center;
+                        font-size: 25px;
+                        background-color: var(--color-primary);
+                        border-radius: 8px;
+                        box-shadow: 2px 2px 0px #17A969;
+                        color: var(--color-black01);
+                        margin-bottom: 20px;
+                    }
+                    div {
+                        display: flex;
+                        align-items: flex-end;
+                        gap: 28px;
+                        h5 {
+                            font-size: 32px;
+                            font-weight: 500;
+                        }
+                        p {
+                            font-size: 24px;
+                        }
+                    }
+                    ul {
+                        li {
+                            font-size: 20px;
+                            margin: 20px 0;
+                            padding-left: 28px;
+                            position: relative;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 9px;
+                                left: 10px;
+                                display: block;
+                                width: 4px;
+                                height: 4px;
+                                background-color: var(--color-white01);
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
-    #about {
-
-    }
+    #about {}
+    #skills {}
 }
